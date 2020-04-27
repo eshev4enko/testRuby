@@ -47,7 +47,7 @@ $queryTitle = "
                 $title['title_id'];
                 $title['title_text'];
              endforeach; ?>
-                <div class="todo-list-inner-box" id="12">
+                <div class="todo-list-inner-box" id="<?=$title['title_id']?>">
                     <form method="post" class="todo-form-main">
                         <header class="header-list col-md-8">
                             <div class="header-title">

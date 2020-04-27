@@ -209,6 +209,7 @@ input:focus {
     align-items: center;
     height: 100%;
     flex-direction: column;
+    justify-content: center;
 }
 
 .todo-list-inner-box {
