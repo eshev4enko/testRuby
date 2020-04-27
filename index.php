@@ -43,14 +43,16 @@ $queryTitle = "
 <body>
     <div class="wrapper">
         <div class="container">
-            <? foreach($resultTitle as $title) :
-                $title['title_id'];
-                $title['title_text'];
-             endforeach; ?>
-                <div class="todo-list-inner-box" id="<?=$title['title_id']?>">
-                    <form method="post" class="todo-form-main">
-                        <header class="header-list col-md-8">
-                            <div class="header-title">
+            <?
+                foreach($resultTitle as $title) {
+                    $title['title_id'];
+                    $title['title_text'];
+                }
+            ?>
+            <div class="todo-list-inner-box" id="<?=$title['title_id']?>">
+                <form method="post" id="to_do_form" class="todo-form-main">
+                    <header class="header-list col-md-8">
+                        <div class="header-title">
 
                                 <input type="text" class="list-title" name="task_list_title" id="<?=$title['title_id']?>" value="<?=$title['title_text']?>" placeholder="Complete the test task for Ruby Garage" readonly>
                                 <div class="header-list-edit">

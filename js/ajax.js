@@ -148,7 +148,6 @@ $(function () {
                     },
                     success:function(data)
                     {
-                       $editHeader.attr('id', title_id);
                        $editHeader.attr('value', title_text);
                     }
 

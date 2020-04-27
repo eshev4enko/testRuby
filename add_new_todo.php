@@ -22,7 +22,7 @@ $data = array(
                         <header class="header-list col-md-8">
                             <div class="header-title">
 
-                                <input type="text" class="list-title" name="task_list_title" id="'.$title['title_id'].'" value="'.$title['title_text'].'" placeholder="Complete the test task for Ruby Garage" readonly>
+                                <input type="text" class="list-title" name="task_list_title" id="'.$title_id.'" value="'.$title['title_text'].'" placeholder="Complete the test task for Ruby Garage" readonly>
                                 <div class="header-list-edit">
                                     <div class="header-list-edit-inner">
                                         <i class="fa fa-pencil todo-header-top todo-header-edit" aria-hidden="true"></i>

@@ -10,14 +10,13 @@ if($_POST["task_name"])
         ':user_id'        => $_SESSION['user_id'],
         ':task_details'   => trim($_POST["task_name"]),
         ':task_status'    => 'yes',
-        ':position_order' => 0,
-        ':title_id'       => $_POST["title_id"]
+        ':position_order' => 0
     );
 
     $query = "
          INSERT INTO task_list 
-         (user_id, task_details, task_status, position_order, title_id) 
-         VALUES (:user_id, :task_details, :task_status, :position_order, :title_id)
+         (user_id, task_details, task_status, position_order) 
+         VALUES (:user_id, :task_details, :task_status, :position_order)
      ";
 
     $statement = $connect->prepare($query);
