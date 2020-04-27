@@ -209,7 +209,6 @@ input:focus {
     align-items: center;
     height: 100%;
     flex-direction: column;
-    justify-content: center;
 }
 
 .todo-list-inner-box {
@@ -231,18 +230,15 @@ input:focus {
 .header-title {
     display: flex;
     align-items: center;
-    padding: 0;
+    background-color: #6495ed;
+    padding: 15px 20px;
 }
 
 .header-title .main-title {
     font: 400 26px / 1.5 'Montserrat-Bold', sans-serif;
     margin: 0;
     width: 100%;
-    color: #444;
     text-align: center;
-    background: #ccc;
-    padding: 5px;
-    border-radius: 10px 10px 0 0;
 }
 
 .header-title .list-title {
@@ -274,14 +270,15 @@ input:focus {
 
 .header-list-edit .fa-pencil,
 .header-list-edit .fa-trash,
-.header-title .fa-calendar {
+.header-title .todo-header-top {
     color: #333;
     font-size: 19px;
     cursor: pointer;
 }
 
 .header-title .fa-calendar,
-.header-list-edit .fa-pencil {
+.header-list-edit .fa-pencil,
+.header-title .todo-header-top {
     padding-right: 10px;
 }
 
@@ -290,12 +287,20 @@ input:focus {
     padding-left: 10px;
 }
 
+.header-list-edit .todo-header-check {
+    display: none;
+    color: green;
+}
+
+.header-list-edit {
+    display: flex;
+}
+
 .enter-data-list {
     display: flex;
     align-items: center;
     padding: 15px 20px;
     background-color: #eae7e7;
-    border: 1px solid #ccc;
 }
 
 .input-list-data {
