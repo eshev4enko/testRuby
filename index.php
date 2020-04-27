@@ -44,10 +44,10 @@ $queryTitle = "
     <div class="wrapper">
         <div class="container">
             <? foreach($resultTitle as $title) :
-                $id = $title['title_id'];
-                $title = $title['title_text'];
+                $title['title_id'];
+                $title['title_text'];
              endforeach; ?>
-                <div class="todo-list-inner-box" id="<?=$id?>">
+                <div class="todo-list-inner-box" id="<?=$title['title_id']?>">
                     <form method="post" class="todo-form-main">
                         <header class="header-list col-md-8">
                             <div class="header-title">
