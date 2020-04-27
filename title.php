@@ -5,11 +5,11 @@ include('db_connect.php');
 $id = $_POST["title_id"];
 $title = $_POST["title_text"];
 
+if ($id == '') {
     $query = "INSERT INTO task_title (title_text) VALUES (:title_text) ";
 
     $statement = $connect->prepare($query);
     $statement->execute(['title_text' => $title]);
-if ($id == '') {
 
     exit();
 } else {

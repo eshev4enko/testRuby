@@ -17,7 +17,7 @@ if ($_POST["title_text"] == '') {
         $title_id = $connect->lastInsertId();
 
         echo '
-            <div class="todo-list-inner-box" id="'.$title_id.'">
+            <div class="todo-list-inner-box" id="'.$_POST["title_id"].'">
                <form method="post" class="todo-form-main">
                         <header class="header-list col-md-8">
                             <div class="header-title">
