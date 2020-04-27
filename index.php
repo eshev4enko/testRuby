@@ -43,8 +43,11 @@ $queryTitle = "
 <body>
     <div class="wrapper">
         <div class="container">
-            <? foreach($resultTitle as $title) :?>
-                <div class="todo-list-inner-box" id="<?=$title['title_id']?>">
+            <? foreach($resultTitle as $title) :
+                $id = $title['title_id'];
+                $title = $title['title_text'];
+             endforeach; ?>
+                <div class="todo-list-inner-box" id="<?=$id?>">
                     <form method="post" class="todo-form-main">
                         <header class="header-list col-md-8">
                             <div class="header-title">
@@ -108,7 +111,6 @@ $queryTitle = "
                         <button type="submit" class="add-todo-list">Add todo list</button>
                     </div>
                 </div>
-            <?endforeach; ?>
         </div>
     </div>
 
