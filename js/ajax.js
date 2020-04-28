@@ -160,30 +160,32 @@ $(function () {
                     });
                 }
         })
-        .on('click', '.add-todo-list', function () {
+        .on('click', '.add-todo-list', function (event) {
             let
+                push            = event.target,
                 $editTodo       = $(this).closest('.todo-list-inner-box'),
                 title_id        = $($editTodo).attr('id'),
                 title_text      = $($editTodo).val();
 
-            $.ajax({
-                url:"add_new_todo.php",
-                method:"POST",
-                data:{
-                    title_id: title_id,
-                    title_text: title_text
-                },
-                success:function(data)
-                {
-                    //$editTodo.attr('value', title_text);
-                    console.log($editTodo);
-                    console.log(data);
-                    $editTodo
-                        .parent()
-                        .append(data);
-                }
+            if ($(push).hasClass('add-todo-list')) {
+                $.ajax({
+                    url: "add_new_todo.php",
+                    method: "POST",
+                    data: {
+                        title_id: title_id,
+                        title_text: title_text
+                    },
+                    success: function (data) {
+                        //$editTodo.attr('value', title_text);
+                        console.log($editTodo);
+                        console.log(data);
+                        $editTodo
+                            .parent()
+                            .append(data);
+                    }
 
-            });
+                });
+            }
         });
 
         $('.list-sections').sortable({
