@@ -50,11 +50,11 @@ $queryTitle = "
                     print_r('121212');
                 }
             ?>
-            <div class="todo-list-inner-box" id="<?=$title['title_id']?>">
+            <div class="todo-list-inner-box" id="12">
                 <form method="post" id="to_do_form" class="todo-form-main">
                     <header class="header-list col-md-8">
                         <div class="header-title">
-                                <input type="text" class="list-title" name="task_list_title" id="<?=$title['title_id']?>" value="<?=$title['title_text']?>" placeholder="Complete the test task for Ruby Garage" readonly>
+                                <input type="text" class="list-title" name="task_list_title" id="12" value="<?=$title['title_text']?>" placeholder="Complete the test task for Ruby Garage" readonly>
                                 <div class="header-list-edit">
                                     <div class="header-list-edit-inner">
                                         <i class="fa fa-pencil todo-header-top todo-header-edit" aria-hidden="true"></i>
