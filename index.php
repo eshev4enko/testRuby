@@ -47,6 +47,7 @@ $queryTitle = "
                 foreach($resultTitle as $title) {
                     print_r($title['title_id']);
                     print_r($title['title_text']);
+                    print_r('121212');
                 }
             ?>
             <div class="todo-list-inner-box" id="<?=$title['title_id']?>">
