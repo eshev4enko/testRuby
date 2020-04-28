@@ -53,7 +53,6 @@ $queryTitle = "
                 <form method="post" id="to_do_form" class="todo-form-main">
                     <header class="header-list col-md-8">
                         <div class="header-title">
-
                                 <input type="text" class="list-title" name="task_list_title" id="<?=$title['title_id']?>" value="<?=$title['title_text']?>" placeholder="Complete the test task for Ruby Garage" readonly>
                                 <div class="header-list-edit">
                                     <div class="header-list-edit-inner">
@@ -67,7 +66,7 @@ $queryTitle = "
                                 <div class="enter-data-list">
                                     <div class="input-list-data">
                                         <input type="text" name="task_name" id="task_name" autocomplete="off" placeholder="Start typing here to create a task">
-                                        <button type="submit" name="submit" class="submit">Add Task</button>
+                                        <button type="submit" name="submit" id="submit">Add Task</button>
                                     </div>
                                 </div>
                             </div>

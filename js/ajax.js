@@ -1,17 +1,17 @@
 $(function () {
     $(document)
-        .on('submit', '.todo-form-main', function(event){
+        .on('submit', '#to_do_form', function(event){
             event.preventDefault();
 
-            $('.submit').attr('disabled', 'disabled');
+            $('#submit').attr('disabled', 'disabled');
             $.ajax({
                 url:"add_task.php",
                 method:"POST",
                 data:$(this).serialize(),
                 success:function(data)
                 {
-                    $('.submit').attr('disabled', false);
-                    $('.todo-form-main')[0].reset();
+                    $('#submit').attr('disabled', false);
+                    $('#to_do_form')[0].reset();
                     $('.list-sections').prepend(data);
 
                     console.log(data);
