@@ -111,8 +111,9 @@ $(function () {
 
             })
         })
-        .on('click', '.todo-header-top', function() {
+        .on('click', '.todo-header-top', function(event) {
             let
+                push            = event.target,
                 $editHeader     = $(this).closest('.header-title').find('input[type="text"]'),
                 $redactHeader   = $editHeader.attr('readonly'),
                 title_id        = $($editHeader).attr('id'),
@@ -139,19 +140,21 @@ $(function () {
                         .hide()
                 }
 
-                $.ajax({
-                    url:"title.php",
-                    method:"POST",
-                    data:{
-                        title_id: title_id,
-                        title_text: title_text
-                    },
-                    success:function(data)
-                    {
-                       $editHeader.attr('value', title_text);
-                    }
+                if ($(push).hasClass('todo-header-check')) {
+                    $.ajax({
+                        url:"title.php",
+                        method:"POST",
+                        data:{
+                            title_id: title_id,
+                            title_text: title_text
+                        },
+                        success:function(data)
+                        {
+                           $editHeader.attr('value', title_text);
+                        }
 
-            });
+                    });
+                }
         })
         .on('click', '.add-todo-list', function () {
             let
