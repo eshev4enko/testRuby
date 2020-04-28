@@ -43,10 +43,72 @@ $queryTitle = "
 <body>
     <div class="wrapper">
         <div class="container">
+            <? if($resultTitle == ''): ?>
+                <div class="todo-list-inner-box" id="'.$title['title_id'].'">
+                    <form method="post" id="to_do_form" class="todo-form-main">
+                        <header class="header-list col-md-8">
+                            <div class="header-title">
+                                <input type="text" class="list-title" name="task_list_title" id="12" value="<?=$title['title_text']?>" placeholder="Complete the test task for Ruby Garage" readonly>
+                                <div class="header-list-edit">
+                                    <div class="header-list-edit-inner">
+                                        <i class="fa fa-pencil todo-header-top todo-header-edit" aria-hidden="true"></i>
+                                        <i class="fa fa-check todo-header-top todo-header-check" aria-hidden="true"></i>
+                                    </div>
+                                    <i class="fa fa-trash todo-header-clear" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="header-add-task">
+                                <div class="enter-data-list">
+                                    <div class="input-list-data">
+                                        <input type="text" name="task_name" id="task_name" autocomplete="off" placeholder="Start typing here to create a task">
+                                        <button type="submit" name="submit" id="submit">Add Task</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </form>
+                    <section class="body-list-data col-md-8">
+                        <ul class="list-sections">
+                            <?php
+                            foreach($result as $row) {
+                                $checker = $row['checkbox'];
+                                if($checker == 1) {
+                                    $style = 'text-decoration: line-through';
+                                    $checked = 'checked';
+                                } else {
+                                    $style = '';
+                                    $checked = '';
+                                }
+
+                                echo '
+                                            <li class="list-add-data" data-title="'.$title['title_id'].'" data-index="'.$row["task_list_id"].'" data-position="'.$row["position_order"].'">
+                                                <div class="list-check-wrap">
+                                                    <input type="checkbox" class="list-check" id="list-check-item-'.$row["task_list_id"].'" name="list-name-'.$row["task_list_id"].'" data-id="'.$row["task_list_id"].'" value="'.$checker.'" '.$checked.'>
+                                                </div>
+                                                <input type="text" style="'.$style.'" class="list-group-item list-check-txt" id="list-group-item-'.$row["task_list_id"].'" data-id="'.$row["task_list_id"].'" value="'.$row["task_details"].'" readonly>
+                                                <div class="change-data-checker" style="display: none;">
+                                                    <div class="change-data-checker-inner">
+                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                        <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                                                    <div class="change-data-checker-inner">
+                                                        <i class="fa fa-pencil change-data-checker-edit change-data-edit-all" aria-hidden="true"></i>
+                                                        <i class="fa fa-check change-data-checker-cross change-data-edit-all" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="change-data-checker-inner">
+                                                        <i class="fa fa-trash badge" aria-hidden="true" data-id="'.$row["task_list_id"].'"></i>
+                                                    </div>
+                                                </div>
+                                            </li>';
+                            }
+                            ?>
+                        </ul>
+                    </section>
+                    <div class="buttons-box">
+                        <button type="submit" class="add-todo-list">Add todo list</button>
+                    </div>
+                </div>
+            <? else: ?>
             <? foreach($resultTitle as $title) :?>
-                    print_r($title['title_id']);
-                    print_r($title['title_text']);
-                    print_r('121212');
                 <div class="todo-list-inner-box" id="'.$title['title_id'].'">
                     <form method="post" id="to_do_form" class="todo-form-main">
                         <header class="header-list col-md-8">
@@ -111,6 +173,7 @@ $queryTitle = "
                         </div>
                     </div>
             <? endforeach; ?>
+            <? endif; ?>
         </div>
     </div>
 
