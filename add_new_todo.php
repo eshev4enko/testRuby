@@ -8,7 +8,6 @@ $data = array(
     ':title_text' => $_POST["title_text"]
 );
 
-
 $query = "INSERT INTO task_title (title_text) VALUES (:title_text) ";
 
 $statement = $connect->prepare($query);
