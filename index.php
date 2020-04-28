@@ -43,7 +43,7 @@ $queryTitle = "
 <body>
     <div class="wrapper">
         <div class="container">
-            <? if($resultTitle == ''): ?>
+            <? if($resultTitle != ''): ?>
                 <div class="todo-list-inner-box" id="'.$title['title_id'].'">
                     <form method="post" id="to_do_form" class="todo-form-main">
                         <header class="header-list col-md-8">
