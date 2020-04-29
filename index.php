@@ -52,7 +52,7 @@ $queryTitle = "
 
                 print_r('23223');
             ?>
-            <div class="todo-list-inner-box" id="<?=$title['title_id']?>">
+            <div class="todo-list-inner-box" id="<?=$_POST['title_id']?>">
                 <form method="post" id="to_do_form" class="todo-form-main">
                     <header class="header-list col-md-8">
                         <div class="header-title">
