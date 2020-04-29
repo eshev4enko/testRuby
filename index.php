@@ -46,14 +46,9 @@ $queryTitle = "
                 foreach($resultTitle as $title) {
                     $title['title_id'];
                     $title['title_text'];
-                    print_r('111');
                 }
-
-                print_r($resultTitle);
-                print_r("id is - " . $_POST['title_id']);
-                print_r("text is - " .$_POST['title_text']);
             ?>
-            <div class="todo-list-inner-box" id="<?=$_POST['title_id']?>">
+            <div class="todo-list-inner-box" id="<?=$title['title_id']?>">
                 <form method="post" id="to_do_form" class="todo-form-main">
                     <header class="header-list col-md-8">
                         <div class="header-title">
