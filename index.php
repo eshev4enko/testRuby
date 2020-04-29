@@ -48,6 +48,8 @@ $queryTitle = "
                     $title['title_id'];
                     $title['title_text'];
                 }
+
+                print_r('23223');
             ?>
             <div class="todo-list-inner-box" id="<?=$title['title_id']?>">
                 <form method="post" id="to_do_form" class="todo-form-main">

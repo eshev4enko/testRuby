@@ -11,7 +11,7 @@ if ($id == '') {
     $statement = $connect->prepare($query);
     $statement->execute(['title_text' => $title]);
 
-    exit();
+    //exit();
 } else {
     $data = array(
 //        ':title_id'    => $_POST["title_id"],
