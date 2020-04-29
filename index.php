@@ -47,6 +47,7 @@ $queryTitle = "
                 foreach($resultTitle as $title) {
                     $title['title_id'];
                     $title['title_text'];
+                    print_r('111');
                 }
 
                 print_r('23223');
