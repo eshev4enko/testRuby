@@ -50,8 +50,8 @@ $queryTitle = "
                 }
 
                 print_r('23223');
-                print_r($_POST['title_id']);
-                print_r($_POST['title_text']);
+                print_r("id is - " . $_POST['title_id']);
+                print_r("text is - " .$_POST['title_text']);
             ?>
             <div class="todo-list-inner-box" id="<?=$_POST['title_id']?>">
                 <form method="post" id="to_do_form" class="todo-form-main">
