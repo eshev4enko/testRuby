@@ -22,7 +22,7 @@ $queryTitle = "
 
     $statement = $connect->prepare($queryTitle);
     $statement->execute();
-    $resultTitle = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $resultTitle = $statement->fetchAll();
 ?>
 
 <!doctype html>
@@ -49,7 +49,7 @@ $queryTitle = "
                     print_r('111');
                 }
 
-                print_r('23223');
+                print_r($resultTitle);
                 print_r("id is - " . $_POST['title_id']);
                 print_r("text is - " .$_POST['title_text']);
             ?>
