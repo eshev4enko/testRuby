@@ -152,7 +152,6 @@ $(function () {
                         {
                            $editHeader.attr('value', title_text);
 
-                           console.log(data);
                            console.log(title_id);
                            console.log(title_text);
                         }

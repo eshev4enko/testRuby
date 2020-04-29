@@ -14,7 +14,7 @@ if ($id == '') {
     exit();
 } else {
     $data = array(
-        ':title_id'    => $_POST["title_id"],
+//        ':title_id'    => $_POST["title_id"],
         ':title_text'  => $_POST["title_text"]
     );
 
