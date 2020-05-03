@@ -209,7 +209,7 @@ input:focus {
     align-items: center;
     height: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .todo-list-inner-box {
@@ -218,6 +218,10 @@ input:focus {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+}
+
+.todo-list-inner-box:first-child {
+    margin-top: 50px;
 }
 
 .todo-list-inner-box.clean-add-list {
@@ -259,6 +263,10 @@ input:focus {
 
 .header-title .list-title::placeholder {
     color: #333;
+}
+
+.header-title .list-title.empty {
+    background-color: red;
 }
 
 .header-list {
@@ -428,6 +436,10 @@ input:focus {
     opacity: 1;
     transition: opacity 0.5s;
     margin-right: 10px;
+}
+
+.add-todo-list {
+    display: none;
 }
 
 .send {
