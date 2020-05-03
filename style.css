@@ -209,7 +209,7 @@ input:focus {
     align-items: center;
     height: 100%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .todo-list-inner-box {
@@ -218,10 +218,6 @@ input:focus {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-}
-
-.todo-list-inner-box:first-child {
-    margin-top: 50px;
 }
 
 .todo-list-inner-box.clean-add-list {
